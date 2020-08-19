@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.PersonDetailActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_padding"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackground">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/person_detail_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_margin">
+
+            <ImageView
+                android:id="@+id/person_detail_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="@dimen/default_margin"
+                android:contentDescription="@string/lbl_user_profile"
+                android:src="@drawable/ic_user"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/person_detail_lbl_personal_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_personal_information"
+                android:textColor="#666666"
+                android:textSize="@dimen/title_label"
+                android:textStyle="bold"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/person_detail_image" />
+
+            <View
+                android:id="@+id/lbl_personal_info_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/default_padding"
+                android:background="#CCCCCC"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/person_detail_lbl_personal_info" />
+
+            <ImageView
+                android:id="@+id/person_detail_ic_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/divider_space"
+                android:contentDescription="@string/lbl_person_name"
+                android:src="@drawable/ic_person"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_personal_info_divider" />
+
+            <TextView
+                android:id="@+id/person_detail_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_padding"
+                android:layout_marginLeft="@dimen/default_padding"
+                android:gravity="center_vertical"
+                android:text="@string/sample_name"
+                android:textSize="@dimen/title_label"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="@id/person_detail_container"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/person_detail_ic_name"
+                app:layout_constraintTop_toTopOf="@id/person_detail_ic_name" />
+
+            <ImageView
+                android:id="@+id/person_detail_ic_birth_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_padding"
+                android:contentDescription="@string/lbl_birth_date"
+                android:src="@drawable/ic_cake"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/person_detail_name" />
+
+            <TextView
+                android:id="@+id/person_detail_birth_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_padding"
+                android:layout_marginLeft="@dimen/default_padding"
+                android:text="November 29, 2020"
+                android:textSize="@dimen/title_label"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="@id/person_detail_container"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/person_detail_ic_birth_date"
+                app:layout_constraintTop_toTopOf="@id/person_detail_ic_birth_date" />
+
+            <ImageView
+                android:id="@+id/person_detail_ic_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_padding"
+                android:contentDescription="@string/lbl_email_address"
+                android:src="@drawable/ic_email"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/person_detail_birth_date" />
+
+            <TextView
+                android:id="@+id/person_detail_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_padding"
+                android:layout_marginLeft="@dimen/default_padding"
+                android:text="@string/sample_email"
+                android:textSize="@dimen/title_label"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="@id/person_detail_container"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/person_detail_ic_email"
+                app:layout_constraintTop_toTopOf="@id/person_detail_ic_email" />
+
+            <ImageView
+                android:id="@+id/person_detail_ic_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/person_detail_email"
+                android:layout_marginTop="@dimen/default_padding"
+                android:contentDescription="@string/lbl_phone_number"
+                android:src="@drawable/ic_call"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/person_detail_email" />
+
+            <TextView
+                android:id="@+id/person_detail_mobile_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_padding"
+                android:layout_marginLeft="@dimen/default_padding"
+                android:text="@string/sample_mobile_number"
+                android:textSize="@dimen/title_label"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="@id/person_detail_container"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/person_detail_ic_mobile"
+                app:layout_constraintTop_toTopOf="@id/person_detail_ic_mobile" />
+
+            <ImageView
+                android:id="@+id/person_detail_ic_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_padding"
+                android:contentDescription="@string/lbl_address"
+                android:src="@drawable/ic_location"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/person_detail_mobile_number" />
+
+            <TextView
+                android:id="@+id/person_detail_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_padding"
+                android:layout_marginLeft="@dimen/default_padding"
+                android:text="@string/sample_address"
+                android:textSize="@dimen/title_label"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="@id/person_detail_container"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/person_detail_ic_address"
+                app:layout_constraintTop_toTopOf="@id/person_detail_ic_address" />
+
+            <TextView
+                android:id="@+id/person_detail_lbl_contact_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:text="@string/lbl_contact_person"
+                android:textColor="#666666"
+                android:textSize="@dimen/title_label"
+                android:textStyle="bold"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/person_detail_address" />
+
+            <View
+                android:id="@+id/lbl_contact_info_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/default_padding"
+                android:background="#CCCCCC"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/person_detail_lbl_contact_person" />
+
+            <ImageView
+                android:id="@+id/person_detail_contact_ic_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/divider_space"
+                android:contentDescription="@string/lbl_person_name"
+                android:src="@drawable/ic_person"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_contact_info_divider" />
+
+            <TextView
+                android:id="@+id/person_detail_contact_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_padding"
+                android:layout_marginLeft="@dimen/default_padding"
+                android:text="@string/sample_name"
+                android:textSize="@dimen/title_label"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="@id/person_detail_container"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/person_detail_contact_ic_name"
+                app:layout_constraintTop_toTopOf="@id/person_detail_contact_ic_name" />
+
+            <ImageView
+                android:id="@+id/person_detail_contact_ic_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/person_detail_contact_name"
+                android:layout_marginTop="@dimen/default_padding"
+                android:contentDescription="@string/lbl_phone_number"
+                android:src="@drawable/ic_call"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/person_detail_contact_name" />
+
+            <TextView
+                android:id="@+id/person_detail_contact_mobile_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_padding"
+                android:layout_marginLeft="@dimen/default_padding"
+                android:text="@string/sample_mobile_number"
+                android:textSize="@dimen/title_label"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="@id/person_detail_container"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/person_detail_contact_ic_mobile"
+                app:layout_constraintTop_toTopOf="@id/person_detail_contact_ic_mobile" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</ScrollView>
