@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">Android Exam</string>
+    <string name="app_name">Persons</string>
+    <string name="title_activity_person_detail">Person Details</string>
+
+    <string name="lbl_user_profile">User Profile</string>
+    <string name="lbl_personal_information">Personal Information</string>
+    <string name="lbl_contact_person">Contact Person</string>
+    <string name="lbl_person_name">Person Name</string>
+    <string name="lbl_email_address">Email Address</string>
+    <string name="lbl_phone_number">Phone Number</string>
+    <string name="lbl_birth_date">Birth Date</string>
+    <string name="lbl_address">Address</string>
+
+    <string name="sample_name">Manuel Avancena</string>
+    <string name="sample_birth_date">July 11, 1998</string>
+    <string name="sample_email">example.email@sample.com</string>
+    <string name="sample_mobile_number">0927 123 4567</string>
+    <string name="sample_address">123 Corner St., Brgy. Mabait, Quezon City, Metro Manila</string>
 </resources>
